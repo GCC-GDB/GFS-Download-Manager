@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+             body {
+                margin: 0;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+            }
+
+            .container {
+                background: white;
+                border-radius: 20px;
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+                padding: 45px 50px;
+                max-width: 550px;
+                width: 100%;
+                text-align: center;
+                position: relative;
+            }
+            .title {
+                font-size: 26px;
+                font-weight: 600;
+                color: #1a1a1a;
+                margin-bottom: 50px;
+            }
+            .desc {
+                font-size: 16px;
+                color: #666;
+                line-height: 1.6;
+                margin-bottom: 35px;
+                text-align: left;
+            }
+
+            .container_opt {
+                background: white;
+                border-radius: 20px;
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+                padding: 45px 50px;
+                max-width: 550px;
+                width: 100%;
+                text-align: center;
+                align-self: center;
+            }
+            .title_opt {
+                font-size: 26px;
+                font-weight: 600;
+                color: #1a1a1a;
+                margin-bottom: 12px;
+            }
+            .desc_opt {
+                font-size: 16px;
+                color: #666;
+                line-height: 1.6;
+                margin-bottom: 35px;
+            }
+
+            input{
+                width: 300px;
+                height: 30px;
+                border: 2px solid #6cc3d5;
+                opacity: 0.8;
+                border-radius: 5px;
+            }
+
+            input:focus{
+                width: 300px;
+                height: 30px;
+                border: 2px solid #6cc3d5;
+                opacity: 0.8;
+                border-radius: 5px;
+                font-size: 14px;
+            }
+
+            .ih{
+                position: relative;
+                bottom: 125px;
+                left: 30px;
+            }
+
+            .ik{
+                position: relative;
+                bottom: 95px;
+                left: 95px;
+            }
+
+            @keyframes run {
+                from { opacity:0; transform:translateY(10px); }
+                to   { opacity:1; transform:translateY(0); }
+            }
+            
+            .enter{
+                background-color: #78c2ad;
+                border: none;
+                width: 125px;
+                height: 40px;
+                color: #FFFFFF;
+                border-radius: 10px;
+
+                position: relative;
+                right: 300px;
+            }
+
+            .enter:hover{
+                transform: translateY(-4px);
+                animation: run 0.5s linear alternate;
+                box-shadow:0 12px 35px rgba(0,0,0,0.12);
+                border: 2px solid #78c2ad;
+                background-color:#FFFFFF;
+                color: #78c2ad;
+                
+            }
+
+            .clear{
+                background-color: #f3969a;
+                border: none;
+                width: 125px;
+                height: 40px;
+                color: #FFFFFF;
+                border-radius: 10px;
+
+                position: relative;
+                left: 90px;
+                bottom: 40px;
+            }
+
+            .clear:hover{
+                transform: translateY(-4px);
+                animation: run 0.5s linear alternate;
+                box-shadow:0 12px 35px rgba(0,0,0,0.12);
+                border: 2px solid #f3969a;
+                background-color:#FFFFFF;
+                color: #f3969a;
+                
+            }
+            
+        
+        </style>
+        <!-- 引入CryptoJS -->
+        <title>Type your key</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="title"> Please type install key</div>
+
+            <div class="desc">Install Header:</div>
+            <div class="desc">Install Key:</div>
+
+            <input class="ih" type="password" id = "ih"></input>
+            <input class="ik" type="password" id = "ik"></input>
+
+            <button class="enter" onclick="check()"> Enter </button>
+            <button class="clear" onclick="clear()"> Clear </button>
+        </div>
+
+    </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.19.0/js/md5.min.js"></script>
+    <script>
+        function check(){
+            let header1 = "a2398688595350284f217cae3b6f07e7";
+            let key1 = "de916a8bae0d90b3af5cee0a72f481f1";
+
+            // 获取输入框【值】 .value
+            let type_header = document.getElementById("ih").value;
+            let type_key = document.getElementById("ik").value;
+
+            // 输入内容md5对比
+            if (md5(type_header) === header1 && md5(type_key) === key1){
+                alert("Key corrent,start download!");
+                window.location.href = "warning.html";
+                // 这里写下载逻辑
+            }else{
+                alert("Key or Header error,Please try again");
+            }
+        }
+
+        function clear(){
+            let type_header = document.getElementById("ih").value;
+            let type_key = document.getElementById("ik").value;
+
+            type_header.value = "";
+            type_key.value = "";
+        }
+    </script>
+</html>

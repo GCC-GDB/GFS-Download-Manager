@@ -1,0 +1,39 @@
+// 通用下载方法
+function downloadFile(url, fileName) {
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = fileName;
+  a.style.display = 'none';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
+// CodeMemorys
+function more_codememorys_binrary() {
+  downloadFile("res/codememorys.exe", "CodeMemorys_Bin.exe");
+}
+function more_codememorys_sourse() {
+  downloadFile("src/src-codememorys.tar", "CodeMemorys_Source.zip");
+}
+
+// MetalCalc
+function more_matalcalc_binrary() {
+  downloadFile("res/option.exe", "MetalCalc_Bin.exe");
+}
+
+// ScanPrice
+function more_scanprice_binrary() {
+  downloadFile("res/ScanPrice.zip", "ScanPrice_Bin.zip");
+}
+function more_scanprice_sourse() {
+  downloadFile("src/src-scanprice.zip", "ScanPrice_Source.zip");
+}
+
+// ChartOfQuestion
+function more_chart_binrary() {
+  downloadFile("resChartOfQuestion.zip", "ChartOfQuestion_Bin.zip");
+}
+function more_chart_sourse() {
+  downloadFile("src/src-chartofquestion.zip", "ChartOfQuestion_Source.zip");
+}

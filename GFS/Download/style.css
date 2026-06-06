@@ -1,0 +1,127 @@
+/*顶部标签栏*/
+.tab-nav{
+  display:flex;
+  border-bottom:1px solid #ccc;
+  position:sticky;
+  top:0;
+  background:#ffffff;
+}
+.tab-btn{
+  padding:12px 24px;
+  cursor:pointer;
+  border-bottom:3px solid transparent;
+  font-size:15px;
+  color:#444;
+}
+.tab-btn.active{
+  border-bottom:3px solid #00af43;
+  opacity: 0.5;
+  color:#000;
+}
+
+/*内容容器*/
+.tab-wrap{
+  padding:30px 20px;
+}
+.tab-box{
+  display:none;
+  flex-direction:column;
+  align-items:center;
+  gap:32px;
+}
+.tab-box.show{
+  display:flex;
+}
+
+/*卡片样式*/
+.container {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  padding: 45px 50px;
+  max-width: 550px;
+  width: 100%;
+  text-align: center;
+}
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+.desc {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.container_opt {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  padding: 45px 50px;
+  max-width: 550px;
+  width: 100%;
+  text-align: center;
+}
+.title_opt {
+  font-size: 26px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+.desc_opt {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+/*按钮样式*/
+.btn {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 14px 32px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin: 8px;
+}
+.download-btnbin {
+  background-color: #22c55e;
+  color: white;
+}
+.download-btnbin:hover {
+  background-color: #16a34a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(34, 197, 94, 0.3);
+}
+.download-btnsrc {
+  background-color: #e02121;
+  color: white;
+}
+.download-btnsrc:hover {
+  background-color: #c41212;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(197, 34, 34, 0.3);
+}
+.download-btnbin_opt {
+  background-color: #22c55e;
+  color: white;
+  font-size: 16px;
+  padding: 14px 32px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin:8px;
+}
+.download-btnbin_opt:hover {
+  background-color: #16a34a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(34, 197, 94, 0.3);
+}
+

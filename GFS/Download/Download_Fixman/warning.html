@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>GFS软件下载法律告知</title>
+    <style>
+        body{
+            background:#f7f8fa;
+            max-width:720px;
+            margin:40px auto;
+            font-family:Microsoft YaHei;
+        }
+        .tip-red{
+            background:#fee;
+            border:1px solid #ffc8c8;
+            padding:18px;
+            border-radius:4px;
+            margin-bottom:12px;
+        }
+        .law-blue{
+            background:#eef6ff;
+            border:1px solid #b6d7ff;
+            padding:18px;
+            border-radius:4px;
+            margin-bottom:12px;
+            line-height:1.7;
+        }
+        .agree-yellow{
+            background:#fff9dd;
+            border:1px solid #ffdf99;
+            padding:18px;
+            border-radius:4px;
+            margin-bottom:25px;
+            display:flex;
+            align-items:center;
+            gap:6px;
+        }
+        .item{margin:10px 0;}
+        input[type="text"]{
+            padding:4px;
+            width:220px;
+        }
+        button{
+            padding:5px 14px;
+            margin-right:8px;
+            border: none;
+            background-color: #2385de;
+            color: #ffffff;
+            border-radius: 10px;
+            width: 125px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tip-red">
+        <strong>⚠️使用风险提示</strong>
+        <p style="margin:6px 0 0;">软件为病毒样本，禁止用于入侵、窃取信息、破坏计算机系统等违法行为，违规使用者自行承担全部法律后果。</p>
+    </div>
+
+    <div class="law-blue">
+        <strong>📜相关法律法规</strong>
+        <p>1.《刑法》285、286条：故意制作、传播破坏性程序、非法侵入计算机系统，可判处有期徒刑并处罚金；</p>
+        <p>2.《网络安全法》《数据安全法》禁止利用软件窃取用户数据、破坏网络环境；</p>
+        <p>3.私自二次打包、捆绑恶意程序分发，需承担民事赔偿、行政处罚乃至刑事责任。</p>
+    </div>
+
+    <div class="agree-yellow">
+        <input type="checkbox" id="readAgree">
+        <span>本人已阅读全部法律条款，郑重保证：仅在合法授权环境使用GFS，绝不进行任何违法操作，违规自行担责。</span>
+    </div>
+
+    
+    <div style="margin-top:15px;">
+        <button onclick="check()">Download</button>
+        <button onclick="clearInput()">Clear</button>
+    </div>
+
+<script>
+function downloadFile(url, fileName) {
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = fileName;
+  a.style.display = 'none';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
+//校验：只判断是否勾选协议，不需要核对Header/Key
+function check(){
+    const isCheck = document.getElementById('readAgree').checked;
+    if(!isCheck){
+        alert("请勾选【我已阅读以上协议】");
+        return;
+    }
+    
+    downloadFile("res/main.zip","main.zip")
+}
+
+//清空输入框
+function clearInput(){
+    document.getElementById('ih').value = '';
+    document.getElementById('ik').value = '';
+}
+
+//下载函数
+
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Download Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--顶部4标签固定不动：下载 / 下载病毒 / 关于 / 我的 -->
+<div class="tab-nav">
+  <div class="tab-btn active" data-target="tab_down">Download</div>
+  <div class="tab-btn" data-target="tab_virus">Download Fixman</div>
+  <div class="tab-btn" data-target="tab_about">About</div>
+  <div class="tab-btn" data-target="tab_my">Mine</div>
+</div>
+
+<div class="tab-wrap">
+  <!--【下载标签】四个软件全部在这里（你要的效果） -->
+  <div class="tab-box show" id="tab_down">
+    <div class="container">
+      <h2 class="title">CodeMemorys</h2>
+      <p class="desc">Download the latest version here.</p>
+      <button class="btn download-btnbin" onclick="more_codememorys_binrary()">Download Binrary</button>
+      <button class="btn download-btnsrc" onclick="more_codememorys_sourse()">Download Sourse</button>
+    </div>
+    <div class="container_opt">
+      <h2 class="title_opt">MetalCalc</h2>
+      <p class="desc_opt">Download the latest version here.</p>
+      <button class="btn download-btnbin_opt" onclick="more_matalcalc_binrary()">Download Binrary</button>
+    </div>
+    <div class="container_opt">
+      <h2 class="title_opt">ScanPrice</h2>
+      <p class="desc_opt">Download the latest version here.</p>
+      <button class="btn download-btnbin_opt" onclick="more_scanprice_binrary()">Download Binrary</button>
+      <button class="btn download-btnsrc" onclick="more_scanprice_sourse()">Download Sourse</button>
+    </div>
+    <div class="container_opt">
+      <h2 class="title_opt">ChartOfQuestion</h2>
+      <p class="desc_opt">Download the latest version here.</p>
+      <button class="btn download-btnbin_opt" onclick="more_chart_binrary()">Download Binrary</button>
+      <button class="btn download-btnsrc" onclick="more_chart_sourse()">Download Sourse</button>
+    </div>
+  </div>
+
+  <!--【下载病毒】独立空白页面 -->
+  <div class="tab-box" id="tab_virus">
+    <div class="container_opt">
+      <h2 class="title_opt">Format</h2>
+      <p class="desc_opt">FixDanger:4,no open sourse no platform software</p>
+      <button class="btn download-btnsrc" onclick="more_fixman_at_format()">Download</button>
+    </div>
+  </div>
+
+  <!--【关于】独立页面 -->
+  <div class="tab-box" id="tab_about">
+    <div class="container">
+      <h2 class="title">关于</h2>
+      <p class="desc">软件下载站点，多款自研工具</p>
+    </div>
+  </div>
+
+  <!--【我的】独立页面 -->
+  <div class="tab-box" id="tab_my">
+    <div class="container">
+      <h2 class="title">我的</h2>
+      <p class="desc">个人下载记录</p>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
